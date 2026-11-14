@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: isvara-external-lb
+  namespace: isvara
+spec:
+  type: LoadBalancer
+  selector:
+    app: isvara
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+  # Optional: request a fixed IP from your LB pool. Omit to get one assigned.
+  # (spec.loadBalancerIP is deprecated upstream but still honoured by many providers.)
+  # loadBalancerIP: YOUR_STATIC_IP

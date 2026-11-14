@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: isvara
+  labels:
+    pod-security.kubernetes.io/enforce: baseline
+    # The Deployment below already meets "restricted"; these surface any regressions
+    pod-security.kubernetes.io/warn: restricted
+    pod-security.kubernetes.io/audit: restricted

@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: isvara
+  namespace: dev01-t4czl   # where your Argo CD instance runs
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/vincenthanjs/isvara-kubernetes.git
+    targetRevision: main
+    path: manifests
+  destination:
+    server: https://10.253.1.15:6443   # as shown by: argocd cluster list
+    namespace: isvara
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
