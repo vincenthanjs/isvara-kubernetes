@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/vincenthanjs/isvara-kubernetes.git
     targetRevision: main
-    path: manifests
+    path: manifest
   destination:
     server: https://10.253.1.15:6443   # as shown by: argocd cluster list
     namespace: isvara
