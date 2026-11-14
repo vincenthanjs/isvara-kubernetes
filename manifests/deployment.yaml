@@ -26,7 +26,7 @@ spec:
       containers:
         - name: isvara
           # CI rewrites this tag to the commit SHA on every build
-          image: ghcr.io/janicehan1985/isvara:2026-08-06-v0
+          image: ghcr.io/janicehan1985/isvara:2026-08-06-v1
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
